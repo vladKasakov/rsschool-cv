@@ -2,8 +2,62 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-  min-height: 100vh;
+.header {
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.avatar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: auto;
+}
+.avatar {
+  border-radius: 50%;
+  min-width: 100px;
+
+}
+.name-container {
+  width: 70%;
+}
+
+.name-container h1 {
+  font-size: 5vw;
+}
+
+.footer {
+  margin-top: 1em;
+}
+
+.footer ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 3em;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer ul li span {
+  font-size: 2vw;
+  font-weight: bold;
+}
+
+.footer-link {
+  display: inline-block;
+}
+
+.footer-link img {
+  width: 5rem;
+}
+
+.footer-link--rsschool img {
+  width: 10rem;
 }
