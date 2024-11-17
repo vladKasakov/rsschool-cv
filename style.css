@@ -17,7 +17,7 @@ pre {
   border-radius: 5px;
 }
 
-pre code{
+pre code {
   font-size: 1.5vw;
 }
 
@@ -64,8 +64,7 @@ a:hover {
   font-size: 5vw;
 }
 
-.navigation {
-  position: sticky;
+.navigation ul {
   display: flex;
   list-style: none;
   align-items: center;
