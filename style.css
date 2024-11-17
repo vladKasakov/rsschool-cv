@@ -12,6 +12,15 @@ p {
   font-size: 2vw;
 }
 
+pre {
+  background-color: rgba(70, 131, 180, 0.418);
+  border-radius: 5px;
+}
+
+pre code{
+  font-size: 1.5vw;
+}
+
 hr {
   margin: 10px 0;
 }

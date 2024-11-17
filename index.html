@@ -76,7 +76,51 @@
             <li>Git</li>
           </ul>
         </section>
-        <section><h2 id="code">Code example</h2></section>
+        <section>
+          <h2 id="code">Code example</h2>
+          <pre>
+          <code>
+            //let generation = '1101_1111_1101_1111';
+
+            const gameOfLife = (str) => {
+              let matrix = str.split('_');
+              let nextGeneration = '';
+                
+              for (let row = 0; row < matrix.length; row++) {
+                //checking the passed NxM grid
+                if (matrix.length !== matrix[row].length) {
+                  return str.replaceAll('1', '0');
+                }
+                  
+                for (let col = 0; col < matrix[row].length; col++) {
+                  let neighboorCount = 0;
+                    
+                  neighboorCount += +(matrix[row - 1]?.[col - 1] ?? 0); //top left neighboor
+                  neighboorCount += +(matrix[row - 1]?.[col] ?? 0); //top neighboor
+                  neighboorCount += +(matrix[row - 1]?.[col + 1] ?? 0); //top right neighboor
+                  neighboorCount += +(matrix[row][col - 1] ?? 0); //left neighboor
+                  neighboorCount += +(matrix[row][col + 1] ?? 0); //right neighboor
+                  neighboorCount += +(matrix[row + 1]?.[col - 1] ?? 0); //buttom left neighboor
+                  neighboorCount += +(matrix[row + 1]?.[col] ?? 0); //buttom neighboor
+                  neighboorCount += +(matrix[row + 1]?.[col + 1] ?? 0); //buttom right neighboor
+                  
+                  if (neighboorCount === 2 || neighboorCount === 3) {
+                    nextGeneration += '1';
+                  } else {
+                    nextGeneration += '0';
+                  }
+                }
+                
+                //adding a separator after each row
+                str.length !== nextGeneration.length && (nextGeneration += '_');
+              }
+            
+              return nextGeneration;
+            };
+
+          </code>
+        </pre>
+        </section>
         <section class="projects">
           <h2 id="projects">Projects</h2>
           <div class="project-list">
@@ -98,7 +142,7 @@
               <li>see all countries from the API</li>
               <li>click through to the border countries on the detail page</li>
               <li>toggle the color scheme between light and dark mode</li>
-              <br>
+              <br />
               Technologies: React, TypeScript, react-router-dom, RTK Query, Sass
             </ul>
             <hr />
