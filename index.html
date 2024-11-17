@@ -1,12 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV. HTML,CSS &amp; Git</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1>CV. HTML,CSS &amp; Git Task start</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kasakov CV</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="avatar-container">
+        <img src="assets/avatar.jpg" alt="vlad-kasakov-avatar" class="avatar" />
+      </div>
+      <div class="container-right">
+        <div class="name-container">
+          <h1>VLAD KASAKOV</h1>
+        </div>
+        <nav class="navigation">
+          <li><a href="#about-me">About me</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#code">Code example</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#english">English</a></li>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="contacts-container">
+        <ul>
+          <li>
+            <a href="mailto:wladyslaw.kasakow@gmail.com"
+              ><img
+                src="https://img.icons8.com/?size=50&id=85467&format=png&color=000000"
+                alt="email link"
+            /></a>
+          </li>
+          <li>
+            <a href="https://t.me/vlad575902" target="_blank"
+              ><img
+                src="https://img.icons8.com/?size=50&id=85466&format=png&color=000000"
+                alt="telegram link"
+            /></a>
+          </li>
+          <li>
+            <a href="https://github.com/vladKasakov" target="_blank"
+              ><img
+                src="https://img.icons8.com/?size=50&id=12599&format=png&color=000000"
+                alt="github link"
+            /></a>
+          </li>
+          <li><a href=""></a></li>
+        </ul>
+      </div>
+      <div class="main-container-right">
+        <section>
+          <h2 id="about-me">About me</h2>
+          <p>
+            I am passionate about technology and dedicated to learning. Although
+            I am not yet a Junior Developer, I am driven by a strong desire to
+            join a large programming company and work alongside people who share
+            my enthusiasm for tech. I am focused on building my skills and enjoy
+            finding efficient solutions to problems. My adaptability helps me
+            pick up new ideas quickly. I am eager to join a team where I can
+            grow, learn from others, and make a positive impact.
+          </p>
+        </section>
+        <section>
+          <h2 id="skills">Skills</h2>
+          <ul>
+            <li>HTML</li>
+            <li>CSS, SCSS</li>
+            <li>JavaScript, TypeScript</li>
+            <li>React</li>
+            <li>Redux</li>
+            <li>Git</li>
+          </ul>
+        </section>
+        <section>
+          <h2 id="code">Code example</h2>
+          <pre>
+          <code>
+            //let generation = '1101_1111_1101_1111';
+
+            const gameOfLife = (str) => {
+              let matrix = str.split('_');
+              let nextGeneration = '';
+                
+              for (let row = 0; row < matrix.length; row++) {
+                //checking the passed NxM grid
+                if (matrix.length !== matrix[row].length) {
+                  return str.replaceAll('1', '0');
+                }
+                  
+                for (let col = 0; col < matrix[row].length; col++) {
+                  let neighboorCount = 0;
+                    
+                  neighboorCount += +(matrix[row - 1]?.[col - 1] ?? 0); //top left neighboor
+                  neighboorCount += +(matrix[row - 1]?.[col] ?? 0); //top neighboor
+                  neighboorCount += +(matrix[row - 1]?.[col + 1] ?? 0); //top right neighboor
+                  neighboorCount += +(matrix[row][col - 1] ?? 0); //left neighboor
+                  neighboorCount += +(matrix[row][col + 1] ?? 0); //right neighboor
+                  neighboorCount += +(matrix[row + 1]?.[col - 1] ?? 0); //buttom left neighboor
+                  neighboorCount += +(matrix[row + 1]?.[col] ?? 0); //buttom neighboor
+                  neighboorCount += +(matrix[row + 1]?.[col + 1] ?? 0); //buttom right neighboor
+                  
+                  if (neighboorCount === 2 || neighboorCount === 3) {
+                    nextGeneration += '1';
+                  } else {
+                    nextGeneration += '0';
+                  }
+                }
+                
+                //adding a separator after each row
+                str.length !== nextGeneration.length && (nextGeneration += '_');
+              }
+            
+              return nextGeneration;
+            };
+
+          </code>
+        </pre>
+        </section>
+        <section class="projects">
+          <h2 id="projects">Projects</h2>
+          <div class="project-list">
+            <a
+              href="https://vladkasakov.github.io/countries-app/"
+              target="_blank"
+              ><h3>Countries app</h3></a
+            >
+            React SPA application allows users:
+            <ul>
+              <li>see all countries from the API on the homepage</li>
+              <li>
+                search for a country using an input field, filter by region
+              </li>
+              <li>
+                click on a country to see more detailed information on a
+                separate page
+              </li>
+              <li>see all countries from the API</li>
+              <li>click through to the border countries on the detail page</li>
+              <li>toggle the color scheme between light and dark mode</li>
+              <br />
+              Technologies: React, TypeScript, react-router-dom, RTK Query, Sass
+            </ul>
+            <hr />
+            <a href="https://vladkasakov.github.io/ip-tracker/" target="_blank"
+              ><h3>IP Tracker</h3></a
+            >
+            The App allows to get information about IP address and see the
+            location on the map. Technologies: React, TypeScript, RTK Query,
+            Leaflet, Sass
+            <hr />
+            <a href="https://todo-app-mauve-six.vercel.app/" target="_blank"
+              ><h3>Todo app</h3></a
+            >
+            The classic todo app. It includes a dark/light theme toggle and drag
+            &amp; drop reordering.<br />
+            Technologies: React, TypeScript, Redux Toolkit, Framer-motion, Sass
+            <hr />
+            <a
+              href="https://vladkasakov.github.io/advice-generator/"
+              target="_blank"
+              ><h3>Advice generator</h3></a
+            >
+            Advice app generates random quotes of advice using 3rd-party API.<br />
+            Technologies: React, TypeScript, Framer-motion, Sass
+          </div>
+        </section>
+        <section>
+          <h2 id="education">Education</h2>
+          JUL.2021 – APR.2022 <br />
+          JavaScript and React developer <br />
+          <a href="https://itvdn.com">ITVDN.com (online)</a>
+          <h3>Diplomas and certificates:</h3>
+          <a href="https://testprovider.com/ru/search-certificate/tp31492030d"
+            >TP31492030D</a
+          >
+          – React Developer<br />
+          <a href="https://testprovider.com/ru/search-certificate/tp84759865d"
+            >TP84759865D</a
+          >
+          – JavaScript Developer<br />
+          <a href="https://testprovider.com/ru/search-certificate/tp93289459"
+            >TP93289459</a
+          >
+          – TypeScript Fundamentals<br />
+          <a href="https://testprovider.com/ru/search-certificate/tp48322691"
+            >TP48322691</a
+          >
+          – Git basics
+        </section>
+        <section>
+          <h2 id="english">English</h2>
+          <p>
+            My English level is pre-intermediate. I have studied with textbooks
+            and practiced by watching movies, listening to podcasts, and
+            following English radio. Also, all the technical documents I use are
+            in English, which has improved my reading and understanding for
+            work. I am continuing to study on my own, and as soon as financially
+            possible, I plan to work with a tutor to reach at least a B2 level.
+          </p>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <ul>
+        <li>
+          <a
+            href="https://rs.school/courses/javascript"
+            target="_blank"
+            class="footer-link footer-link--rsschool"
+          >
+            <img src="/assets/rs-school-logo.svg" alt="rs-school-link" />
+          </a>
+        </li>
+        <li><span>2024</span></li>
+        <li>
+          <a
+            href="https://github.com/vladKasakov"
+            target="_blank"
+            class="footer-link"
+          >
+            <img
+              src="https://img.icons8.com/?size=100&id=12599&format=png&color=000000"
+              alt="link to the author's GitHub"
+            />
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </body>
 </html>
