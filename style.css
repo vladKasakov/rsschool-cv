@@ -4,7 +4,27 @@
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
+body {
+  padding: 0 20px;
+  font-size: 2vw;
+}
+p {
+  font-size: 2vw;
+}
 
+hr {
+  margin: 10px 0;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+  color: steelblue;
+  font-weight: bold;
+}
+
+a:hover {
+  color: rgb(36, 57, 120);
+}
 .header {
   margin-top: 1em;
   display: flex;
@@ -22,18 +42,69 @@
 .avatar {
   border-radius: 50%;
   min-width: 100px;
-
 }
-.name-container {
+
+.container-right {
   width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 10vw;
 }
 
 .name-container h1 {
   font-size: 5vw;
 }
 
+.navigation {
+  position: sticky;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.main {
+  margin-top: 3em;
+  display: flex;
+  gap: 10px;
+}
+.contacts-container {
+  width: 30%;
+}
+
+.contacts-container ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.main-container-right {
+  width: 70%;
+}
+.main section:not(:first-child) {
+  margin-top: 20px;
+}
+
+.main section h2 {
+  font-size: 3.5vw;
+}
+
+.main section ul {
+  list-style: none;
+  font-size: 2vw;
+}
+
+.main .projects ul {
+  list-style: circle;
+  list-style-position: inside;
+}
+
+.main .project-list h3 {
+  margin: 10px;
+}
+
 .footer {
-  margin-top: 1em;
+  margin-top: 3em;
 }
 
 .footer ul {
@@ -46,7 +117,7 @@
 }
 
 .footer ul li span {
-  font-size: 2vw;
+  font-size: 2.5vw;
   font-weight: bold;
 }
 
