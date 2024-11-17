@@ -16,12 +16,14 @@
           <h1>VLAD KASAKOV</h1>
         </div>
         <nav class="navigation">
-          <li><a href="#about-me">About me</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#code">Code example</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#english">English</a></li>
+          <ul>
+            <li><a href="#about-me">About me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#code">Code example</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#english">English</a></li>
+          </ul>
         </nav>
       </div>
     </header>
@@ -86,13 +88,13 @@
               let matrix = str.split('_');
               let nextGeneration = '';
                 
-              for (let row = 0; row < matrix.length; row++) {
+              for (let row = 0; row &lt; matrix.length; row++) {
                 //checking the passed NxM grid
                 if (matrix.length !== matrix[row].length) {
                   return str.replaceAll('1', '0');
                 }
                   
-                for (let col = 0; col < matrix[row].length; col++) {
+                for (let col = 0; col &lt; matrix[row].length; col++) {
                   let neighboorCount = 0;
                     
                   neighboorCount += +(matrix[row - 1]?.[col - 1] ?? 0); //top left neighboor
@@ -142,9 +144,8 @@
               <li>see all countries from the API</li>
               <li>click through to the border countries on the detail page</li>
               <li>toggle the color scheme between light and dark mode</li>
-              <br />
-              Technologies: React, TypeScript, react-router-dom, RTK Query, Sass
             </ul>
+            Technologies: React, TypeScript, react-router-dom, RTK Query, Sass
             <hr />
             <a href="https://vladkasakov.github.io/ip-tracker/" target="_blank"
               ><h3>IP Tracker</h3></a
